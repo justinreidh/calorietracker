@@ -13,6 +13,7 @@ export default function TabLayout() {
         headerTintColor: '#fff',
         tabBarStyle: {
         backgroundColor: '#25292e',
+        
         },
     }}
     >
@@ -24,19 +25,29 @@ export default function TabLayout() {
             <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24}/>
         ) }} 
         />
-      <Tabs.Screen
-        name="about"
-        options={{
-          title: 'Goal',
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24}/>
-          ),
-        }}
-      />
+      
       <Tabs.Screen
         name="weight"
         options={{
           title: 'Weight',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name={focused ? 'scale' : 'scale-outline'} color={color} size={24}/>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="about"
+        options={{
+          title: 'Goal Coach',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name={focused ? 'flag' : 'flag-outline'} color={color} size={24}/>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="info"
+        options={{
+          title: 'Info',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24}/>
           ),
